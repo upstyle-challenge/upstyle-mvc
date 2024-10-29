@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upstyle - Registro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f8f8f8;
+        }
+
+        .register-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #f8f8f8;
+        }
+
+        .register-box {
+            background: #fff;
+            padding: 40px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 450px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .input-group input,
+        .input-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .btn {
+            background: #ff4081;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            width: 100%;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #e91e63;
+        }
+
+        .login-link {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .login-link a {
+            color: #ff4081;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .login-link a:hover {
+            color: #e91e63;
+        }
+    </style>
+</head>
+<body>
+<div class="register-container">
+    <div class="register-box">
+        <h2 th:text="#{register.title}">Crie sua conta na UpStyle</h2>
+        <form action="/register" method="post">
+            <div class="input-group">
+                <label for="username" th:text="#{register.username.label}">Usuário</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="email" th:text="#{register.email.label}">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="firstName" th:text="#{register.firstname.label}">Nome</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="input-group">
+                <label for="lastName" th:text="#{register.lastname.label}">Sobrenome</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+            <div class="input-group">
+                <label for="password" th:text="#{register.password.label}">Senha</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="input-group">
+                <label for="confirmPassword" th:text="#{register.confirmPassword.label}">Confirme a Senha</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </div>
+            <div class="input-group">
+                <label for="gender" th:text="#{register.gender.label}">Gênero</label>
+                <select id="gender" name="gender" required>
+                    <option value="male" th:text="#{register.gender.male}">Masculino</option>
+                    <option value="female" th:text="#{register.gender.female}">Feminino</option>
+                    <option value="other" th:text="#{register.gender.other}">Outro</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="age" th:text="#{register.age.label}">Idade</label>
+                <input type="number" id="age" name="age" min="1" required>
+            </div>
+            <div class="input-group">
+                <label for="income" th:text="#{register.income.label}">Renda</label>
+                <input type="number" id="income" name="income" step="0.01" min="0" required>
+            </div>
+            <button type="submit" class="btn" th:text="#{register.button}">Registrar</button>
+        </form>
+        <div class="login-link">
+            <p th:text="#{register.login.prompt}">Já tem uma conta?</p><a href="/login" th:text="#{register.login.link}">Faça login</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

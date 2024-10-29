@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="#{title.landing}">Upstyle - Plataforma de Recomendações de Moda</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #f8f8f8;
+            padding: 20px 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #333;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .hero {
+            background: url('https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            opacity: 0.9;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background: #ff4081;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+            width: 198px;
+        }
+
+        .btn:hover {
+            background: #e91e63;
+        }
+
+        .features {
+            padding: 50px 0;
+            background: #fff;
+        }
+
+        .features h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+
+        .feature {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .about {
+            padding: 50px 0;
+            background: #f8f8f8;
+        }
+
+        .about h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .contact {
+            padding: 50px 0;
+        }
+
+        .contact h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="container">
+        <h1 th:text="#{app.title}">UpStyle</h1>
+        <nav>
+            <ul>
+                <li><a href="#features" th:text="#{menu.features}">Funcionalidades</a></li>
+                <li><a href="#about" th:text="#{menu.about}">Sobre Nós</a></li>
+                <li><a href="#contact" th:text="#{menu.contact}">Contato</a></li>
+                <li><a href="/login" th:text="#{menu.login}">Entrar</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h2 th:text="#{hero.title}">Descubra a Moda que Combina com Você</h2>
+        <p th:text="#{hero.description}">Na UpStyle, oferecemos recomendações de moda personalizadas baseadas em seu estilo, interesses e preferências.</p>
+        <a href="/register" class="btn" th:text="#{hero.button}">Comece Agora</a>
+    </div>
+</section>
+
+<section id="features" class="features">
+    <div class="container">
+        <h2 th:text="#{features.title}">Funcionalidades</h2>
+        <div class="feature">
+            <h3 th:text="#{features.personalizedRecommendations.title}">Recomendações Personalizadas</h3>
+            <p th:text="#{features.personalizedRecommendations.description}">Receba sugestões de produtos que realmente combinam com seu estilo pessoal.</p>
+        </div>
+        <div class="feature">
+            <h3 th:text="#{features.customShoppingExperience.title}">Experiência de Compra Personalizada</h3>
+            <p th:text="#{features.customShoppingExperience.description}">Desfrute de uma experiência de compra única e adaptada às suas preferências.</p>
+        </div>
+        <div class="feature">
+            <h3 th:text="#{features.easyToUse.title}">Fácil de Usar</h3>
+            <p th:text="#{features.easyToUse.description}">Nossa interface é intuitiva e fácil de navegar, facilitando sua experiência.</p>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="about">
+    <div class="container">
+        <h2 th:text="#{about.title}">Sobre Nós</h2>
+        <p th:text="#{about.description}">UpStyle é uma plataforma dedicada a transformar a maneira como você descobre e compra moda. Utilizamos inteligência artificial para oferecer recomendações personalizadas que atendem às suas necessidades e desejos.</p>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <div class="container">
+        <h2 th:text="#{contact.title}">Entre em Contato</h2>
+        <p style="padding-bottom: 22px;" th:text="#{contact.description}">Tem alguma dúvida? Estamos aqui para ajudar!</p>
+        <a href="mailto:contato@upstyle.com" class="btn" th:text="#{contact.button}">Envie-nos um Email</a>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p th:text="#{footer.copy.landing}">&copy; 2024 UpStyle. Todos os direitos reservados.</p>
+    </div>
+</footer>
+</body>
+</html>

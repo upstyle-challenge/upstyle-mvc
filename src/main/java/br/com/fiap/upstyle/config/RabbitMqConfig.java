@@ -1,5 +1,6 @@
 package br.com.fiap.upstyle.config;
 
+import br.com.fiap.upstyle.model.AppUser;
 import br.com.fiap.upstyle.model.Product;
 import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
@@ -11,6 +12,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.core.userdetails.User;
+
+import java.util.List;
 
 @Configuration
 public class RabbitMqConfig {

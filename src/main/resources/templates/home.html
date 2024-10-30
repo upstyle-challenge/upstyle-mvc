@@ -107,6 +107,30 @@
         color: #666;
     }
 
+    /* Estilos para o card especial */
+    .featured-card {
+        background-color: #ffecb3; /* Cor de destaque */
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0;
+        position: relative;
+    }
+
+    .featured-card h2 {
+        font-size: 1.5rem;
+        color: #d69e26; /* Cor do título */
+        margin-bottom: 10px;
+    }
+
+    .featured-card img {
+        max-width: 150px;
+        margin-bottom: 10px;
+    }
+
     footer {
       background: #333;
       color: #fff;
@@ -134,8 +158,17 @@
   <div class="welcome">
     <span th:text="#{greeting}">Olá</span> <span th:text="${userFirstName}">Nome do Usuário</span>, <span th:text="#{welcome}">seja bem-vindo(a)!</span>
   </div>
+
   <div class="recommendation-title">
     <span th:text="#{recommendation.title}">A Upstyle preparou algumas coisas para você...</span>
+  </div>
+
+  <div class="featured-card">
+    <h2 th:text="#{featured.product.title}">Produto em Destaque</h2>
+    <img th:src="${featuredProduct.imageUrl}" alt="Imagem do Produto em Destaque">
+    <h3 th:text="${featuredProduct.name}">Nome do Produto</h3>
+    <p th:text="${featuredProduct.description}">Descrição do produto</p>
+    <p>R$<span th:text="${featuredProduct.price}">Preço do Produto</span></p>
   </div>
 
   <div class="product-grid">

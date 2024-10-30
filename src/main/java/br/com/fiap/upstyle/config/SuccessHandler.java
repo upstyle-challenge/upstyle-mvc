@@ -23,7 +23,7 @@ public class SuccessHandler implements AuthenticationSuccessHandler {
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
         HttpSession session = request.getSession();
         AppUser user = appUserRepository.findByUsername(authentication.getName());
-        session.setAttribute("firstName", user.getFirstName());
+        session.setAttribute("user", user);
 
         boolean hasRole = authentication.getAuthorities().stream().anyMatch(grantedAuthority -> grantedAuthority.getAuthority().equals("ROLE_ADMIN"));
 

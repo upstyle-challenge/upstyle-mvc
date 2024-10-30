@@ -9,4 +9,4 @@ O projeto contempla os seguintes tópicos:
 - [x] Implementação de recursos de internacionalização;
 - [x] Configuração de recursos de mensageria (produtores e consumidores);
 - [x] Implementação de monitoramento com o Spring Boot Actuator;
-- [ ] Implementação de recursos de inteligência artificial utilizando o framework Spring AI;
+- [x] Implementação de recursos de inteligência artificial utilizando o framework Spring AI;

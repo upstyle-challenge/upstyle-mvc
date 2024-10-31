@@ -60,10 +60,10 @@ Certifique-se de ter os seguintes softwares instalados:
     docker exec -it ollama ollama run llama3.2
 
 4. Inicie a aplicação Spring Boot:
-  ```bash
-  mvn spring-boot:run
+   ```bash
+   mvn spring-boot:run
 
-5. Acesse a aplicação no navegador:
+6. Acesse a aplicação no navegador:
 - URL da aplicação: http://localhost:8080
 - URL do RabbitMQ: http://localhost:15672 (usuário: guest, senha: guest)
 

@@ -105,4 +105,4 @@ Certifique-se de ter os seguintes softwares instalados:
 ---
 
 ## Vídeo Demonstrativo
-Assista ao vídeo de apresentação e demonstração da aplicação [clicando aqui](https://linkdovideo)).
+Assista ao vídeo de apresentação e demonstração da aplicação [clicando aqui](https://linkdovideo).

@@ -43,7 +43,7 @@ Certifique-se de ter os seguintes softwares instalados:
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/upstyle.git
+   git clone https://github.com/seu-usuario/upstyle.git](https://github.com/upstyle-challenge/upstyle-mvc.git
    cd upstyle
 
 2. Clone o repositório:

@@ -7,6 +7,7 @@
 - Miguel Santos -  RM551640
 - João Gabriel Cardoso - RM552078
 - Felipe Morais - RM551463
+- Renan Vieira de Jesus - RM551813
 
 ---
 
